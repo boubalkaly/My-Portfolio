@@ -22,13 +22,13 @@ class ProjectBase(BaseModel):
 
 
 class ProjectCreate(ProjectBase):
-    pass
+    title: str
 
 
 class Project(ProjectBase):  # this info is what gets returned from the api
     id: int
     is_active: bool
-    title: str
+
     tags: list(Tag) = []
 
     class Config:
